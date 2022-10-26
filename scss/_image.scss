@@ -1,0 +1,39 @@
+.mimage {
+  display: none;
+}
+.dimage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  position: relative;
+  height: fit-content;
+
+  .imgd {
+    width: 100%;
+    position: relative;
+    height: fit-content;
+    &:hover {
+      cursor: pointer;
+      img{
+        opacity: .3;
+      }
+      p{
+        color:$Black;
+      }
+    }
+    img {
+      width: 100%;
+      object-fit: contain;
+    
+    }
+    p {
+      position: absolute;
+      bottom: 1.5rem;
+      text-transform: uppercase;
+      color: $White;
+      font-family: $josefin;
+      font-size: 2rem;
+      left: 30px;
+    }
+  }
+}

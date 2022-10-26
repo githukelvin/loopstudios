@@ -1,0 +1,25 @@
+.mimage {
+  display: none;
+}
+
+.dimage {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  position: relative;
+  height: fit-content;
+}
+.dimage .imgd {
+  width: 100%;
+  position: relative;
+  height: fit-content;
+}
+.dimage img {
+  width: 100%;
+  object-fit: contain;
+}
+.dimage p {
+  position: absolute;
+  bottom: 1rem;
+  text-transform: uppercase;
+}
