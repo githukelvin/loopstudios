@@ -1,64 +1,63 @@
-section{
-    width: 100%;
-   
+section {
+  width: 100%;
 }
 .sect1 {
-  margin-top: 5em;
+  margin-top: 8em;
   height: 650px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   // grid-template-rows: 700px;
 
   position: relative;
-  .img{
+  .img {
     width: 95%;
     height: fit-content;
 
-    img{
-        object-fit: contain;
+    img {
+      object-fit: contain;
     }
   }
 
   .info {
     position: absolute;
-    top: 270px;
-    left:570px;
-    padding: 4em;
-background-color: $White;
-width: 100%;
+    top: 230px;
+    left: 570px;
+    padding: 5em;
+    background-color: $White;
+    width: 100%;
     h1 {
-        font-family: $josefin;
-        text-transform: uppercase;
-        font-size: 3rem;
-        line-height: 1;
-        font-weight: 100;
+      font-family: $josefin;
+      text-transform: uppercase;
+      font-size: 3rem;
+      line-height: 1;
+      font-weight: 100;
     }
     p {
-        font-family: $alata;
-        line-height: 1.5;
-        font-size: 1rem;
-        color:$DarkGray;
+      font-family: $alata;
+      line-height: 1.5;
+      font-size: 1rem;
+      color: $DarkGray;
     }
   }
 }
 
-.all{
-  h2{
+.all {
+  h2 {
     font-family: $josefin;
     font-size: 2rem;
     text-transform: uppercase;
   }
-  a{
+  a {
     color: $Black;
     font-family: $alata;
     text-transform: uppercase;
-    border: 2px solid  $Black;
-    padding: .5rem 2rem;
+    border: 1px solid $Black;
+    padding: 0.5rem 2.5rem;
     font-size: 15px;
     letter-spacing: 1px;
-    &:hover{
+    &:hover {
       background-color: $Black;
-      color:$White;
+      color: $White;
     }
   }
 }

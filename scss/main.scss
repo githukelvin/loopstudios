@@ -1,68 +1,86 @@
-@import  "./config";
+@import "./config";
 // HEADER STYLING
 
-header{
-    background-image: url(../images/desktop/image-hero.jpg);
+header {
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  filter: saturate(1.5);
+  height: 43em;
+}
+.nav-bar {
+  width: $containerLg;
+  height: 150px;
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .logo {
+    font-size: 2.2rem;
+    font-family: $alata;
+  }
+  a {
+    color: $White;
+  }
+  .ham{
+    display: none;
+    width: 25px;
+    height: 25px;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width:100%;
-    height: 40em;
-}
-.nav-bar{
-    // width: $containerLg;
-    height: 100px;
+    background-size: contain;
+    cursor: pointer;
+    background-image: url(../images/icon-hamburger.svg);
+  }
+  nav{
+    height: fit-content ;
+   ul {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    .logo{
-        font-size: 2.2rem;
-        font-family: $alata;    }
-    a{
-        color: $White;
-    }
-    nav ul{
-        display: flex;
-        gap:3rem;
-        height:30px;
+    gap: 3rem;
+    height: 30px;
 
-        li a{
-            font-family: $josefin;
-            font-size: 1.1rem;
-            color: $White;
-            font-weight: 700;
-            padding-bottom:10px;
+    li a {
+      display: flex;
+      font-family: $josefin;
+      font-size: clamp(1rem,1.1rem,2rem);
+      color: $White;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding-bottom: 8px;
 
-            &:hover{
-                
-                border-bottom:2px solid $White;
-            }
-        }
+      &:hover {
+        border-bottom: 2px solid $White;
+      }
     }
+  }
 }
-.impressive{
-    width: fit-content;
-    border:  2px   solid $White;
-    margin-top: 100px;
+}
+.impressive {
+  width: fit-content;
+  border: 2px solid $White;
+  margin-top: 100px;
+  position: relative;
 
-    p{
-        color: $White;
-        text-transform: uppercase;
-        padding: 30px;
-        font-size: 80px;
-        font-weight: 300;
-        font-family: $josefin;
-        padding-right:5rem;
-    }
+  p {
+    color: $White;
+    text-transform: uppercase;
+    padding: 30px;
+    font-size: 80px;
+    font-weight: 300;
+    font-family: $josefin;
+    padding-right: 5rem;
+  }
 }
 @import "./mai";
-.all{
-    display: flex;
-    height: 100px;
-    justify-content: space-between;
-    align-items: center;
+.all {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @import "./image";
-@import "./footer"
+@import "./footer";
+@import "./responisveness"
