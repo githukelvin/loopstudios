@@ -6,22 +6,39 @@
     background-image: url(../images/mobile/image-hero.jpg);
   }
   .nav-bar {
-    .logo, .ham {
-        position: relative;
+   
+    .logo,
+    .ham {
+      position: relative;
       z-index: 39993;
+    }
+    .ham{
+
+      &[data-visible="true"]{
+        background-image: url(../images/icon-close.svg);
+      
+       }
     }
     nav ul {
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: max-content;
+      height: min-content;
       position: absolute;
       left: 0;
       top: 0;
-      z-index: 0;
       gap: 2em;
-      padding-top: 200px;
+      padding-top: 150px;
       background-color: $Black;
+      transform: translateX(-200%);
+      transition:all 2s ease-out;
+
+      
+        &[data-visible="true"]{
+            transform: translateX(0);
+            transition: all 3s ease;
+          
+        }
       li {
         width: 100%;
         height: 80px;
@@ -29,13 +46,13 @@
         gap: 2em;
 
         a {
-          font-size: 3em;
+          font-size: 2em;
           font-family: $josefin;
           padding-bottom: 0;
           width: 100%;
           margin-left: 50px;
-         border: none;
-          &:hover{
+          border: none;
+          &:hover {
             border: none;
           }
         }
@@ -46,6 +63,7 @@
       display: block;
     }
   }
+
   .impressive {
     z-index: -333;
   }
@@ -68,11 +86,50 @@
 }
 
 @mixin small_devices {
+  .container {
+    width: $containerSm;
+  }
   .nav-bar {
     nav ul {
       height: max-content;
     }
   }
+  .impressive {
+    p {
+      font-size: 35px;
+      padding: 10px;
+    }
+  }
+  .sect1 {
+    grid-template-columns: 1fr;
+
+    .dimg {
+      display: none;
+    }
+    .mimg {
+      display: block;
+      width: 100%;
+      // height: ;
+
+      img {
+        width: 100%;
+      }
+    }
+    .info {
+      width: 100%;
+      padding: 0;
+      padding-top: 2em;
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        text-align: center;
+        padding-top: 1em;
+        font-size: 1em;
+      }
+    }
+  }
+
   .mimage {
     display: grid;
     gap: 2em;
@@ -80,6 +137,33 @@
   }
   .dimage {
     display: none;
+  }
+  .all {
+    justify-content: center;
+    h2 {
+      text-align: center;
+    }
+
+    .dlink {
+      display: none;
+    }
+  }
+  .mlink {
+    display: flex;
+    margin-left:6em;
+    width: fit-content;
+    justify-content: center;
+    color: $Black;
+    font-family: $alata;
+    text-transform: uppercase;
+    border: 1px solid $Black;
+    padding: 0.5rem 2rem;
+    font-size: 15px;
+    letter-spacing: 1px;
+    &:hover {
+      background-color: $Black;
+      color: $White;
+    }
   }
   .footer {
     justify-content: center;

@@ -31,7 +31,7 @@
       <div class="nav-bar container">
         <a href="#" class="logo">loopstudios</a>
         <nav>
-          <ul>
+          <ul class="nav-list"  data-visible="false">
             <li><a href="">About</a></li>
             <li><a href="">Careers</a></li>
             <li><a href="">Events</a></li>
@@ -39,7 +39,7 @@
             <li><a href="">Support</a></li>
           </ul>
         </nav>
-<div class="ham">
+<div class="ham" data-visible="false">
 
 </div>
       </div>
@@ -55,9 +55,12 @@
       <section>
         <div class="container sect1">
             
-              <div class="img">
-                <img src="./images/desktop/image-interactive.jpg" alt="interactive">
-              </div>
+          <div class="dimg">
+            <img src="./images/desktop/image-interactive.jpg" alt="interactive">
+          </div> 
+           <div class="mimg">
+            <img src="./images/mobile/image-interactive.jpg" alt="interactive">
+          </div>
               
             
             <div class="info">
@@ -72,7 +75,7 @@
       </section>
       <div class="container all">
         <h2>Our creations</h2>
-        <a href="">See all</a>
+        <a href="" class="dlink">See all</a>
       </div>
       <section>
         <section>
@@ -144,6 +147,8 @@
               <img src="./images/mobile/image-fisheye.jpg" alt=" image-fisheye">
               <p>the fisheye</p>
             </div>
+        <a href="" class="mlink">See all</a>
+
           </div>
         </section>
     </main>
@@ -179,5 +184,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+    <script src="./index.js"></script>
   </body>
 </html>

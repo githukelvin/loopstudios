@@ -22,7 +22,7 @@ header {
   background-position: center;
   width: 100%;
   filter: saturate(1.5);
-  height: 43em;
+  height: 41em;
 }
 
 .nav-bar {
@@ -62,9 +62,8 @@ header {
 .nav-bar nav ul li a {
   display: flex;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1.1rem;
   color: hsl(0deg, 0%, 100%);
-  text-transform: uppercase;
+  font-size: 1rem;
   font-weight: 700;
   padding-bottom: 8px;
 }
@@ -101,13 +100,16 @@ section {
   grid-template-columns: 2fr 1fr;
   position: relative;
 }
-.sect1 .img {
+.sect1 .mimg {
+  display: none;
+}
+.sect1 .dimg {
   width: 95%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-.sect1 .img img {
+.sect1 .dimg img {
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -137,6 +139,9 @@ section {
   font-family: "Josefin Sans", sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
+}
+.all mlink {
+  display: none;
 }
 .all a {
   color: hsl(0deg, 0%, 0%);
@@ -271,24 +276,33 @@ footer .right p {
   header {
     background-image: url(../images/mobile/image-hero.jpg);
   }
-  .nav-bar .logo, .nav-bar .ham {
+  .nav-bar .logo,
+.nav-bar .ham {
     position: relative;
     z-index: 39993;
+  }
+  .nav-bar .ham[data-visible=true] {
+    background-image: url(../images/icon-close.svg);
   }
   .nav-bar nav ul {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 0;
     gap: 2em;
-    padding-top: 200px;
+    padding-top: 150px;
     background-color: hsl(0deg, 0%, 0%);
+    transform: translateX(-200%);
+    transition: all 2s ease-out;
+  }
+  .nav-bar nav ul[data-visible=true] {
+    transform: translateX(0);
+    transition: all 3s ease;
   }
   .nav-bar nav ul li {
     width: 100%;
@@ -297,7 +311,7 @@ footer .right p {
     gap: 2em;
   }
   .nav-bar nav ul li a {
-    font-size: 3em;
+    font-size: 2em;
     font-family: "Josefin Sans", sans-serif;
     padding-bottom: 0;
     width: 100%;
@@ -331,10 +345,43 @@ footer .right p {
   }
 }
 @media screen and (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
   .nav-bar nav ul {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
+  }
+  .impressive p {
+    font-size: 35px;
+    padding: 10px;
+  }
+  .sect1 {
+    grid-template-columns: 1fr;
+  }
+  .sect1 .dimg {
+    display: none;
+  }
+  .sect1 .mimg {
+    display: block;
+    width: 100%;
+  }
+  .sect1 .mimg img {
+    width: 100%;
+  }
+  .sect1 .info {
+    width: 100%;
+    padding: 0;
+    padding-top: 2em;
+  }
+  .sect1 .info h1 {
+    font-size: 1.5rem;
+  }
+  .sect1 .info p {
+    text-align: center;
+    padding-top: 1em;
+    font-size: 1em;
   }
   .mimage {
     display: grid;
@@ -343,6 +390,34 @@ footer .right p {
   }
   .dimage {
     display: none;
+  }
+  .all {
+    justify-content: center;
+  }
+  .all h2 {
+    text-align: center;
+  }
+  .all .dlink {
+    display: none;
+  }
+  .mlink {
+    display: flex;
+    margin-left: 6em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    justify-content: center;
+    color: hsl(0deg, 0%, 0%);
+    font-family: "Alata", sans-serif;
+    text-transform: uppercase;
+    border: 1px solid hsl(0deg, 0%, 0%);
+    padding: 0.5rem 2rem;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .mlink:hover {
+    background-color: hsl(0deg, 0%, 0%);
+    color: hsl(0deg, 0%, 100%);
   }
   .footer {
     justify-content: center;

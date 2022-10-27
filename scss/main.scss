@@ -8,8 +8,9 @@ header {
   background-position: center;
   width: 100%;
   filter: saturate(1.5);
-  height: 43em;
+  height: 41em;
 }
+
 .nav-bar {
   width: $containerLg;
   height: 150px;
@@ -44,9 +45,10 @@ header {
     li a {
       display: flex;
       font-family: $josefin;
-      font-size: clamp(1rem,1.1rem,2rem);
+      // font-size: clamp(.5rem,.9rem,2rem);
       color: $White;
-      text-transform: uppercase;
+      font-size: 1rem;
+      // text-transform: uppercase;
       font-weight: 700;
       padding-bottom: 8px;
 

@@ -9,7 +9,10 @@ section {
   // grid-template-rows: 700px;
 
   position: relative;
-  .img {
+  .mimg{
+    display: none;
+  }
+  .dimg {
     width: 95%;
     height: fit-content;
 
@@ -46,6 +49,9 @@ section {
     font-family: $josefin;
     font-size: 2rem;
     text-transform: uppercase;
+  }
+  mlink{
+    display: none;
   }
   a {
     color: $Black;
