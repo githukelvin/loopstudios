@@ -71,7 +71,12 @@
     display: grid;
     grid-template-columns: 1fr;
     height: fit-content;
-
+ .dimg{
+  width:100%;
+  img{
+    width:100%;
+  }
+ }
     .info {
       position: relative;
       top: 0;

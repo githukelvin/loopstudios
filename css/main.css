@@ -334,6 +334,12 @@ footer .right p {
     height: -moz-fit-content;
     height: fit-content;
   }
+  .sect1 .dimg {
+    width: 100%;
+  }
+  .sect1 .dimg img {
+    width: 100%;
+  }
   .sect1 .info {
     position: relative;
     top: 0;
