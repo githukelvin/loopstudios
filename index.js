@@ -13,17 +13,7 @@ ham.addEventListener("click", () => {
   } else if (visible == "true") {
     ul.setAttribute("data-visible", false);
     ham.setAttribute("data-visible", false);
-    
-    window.addEventListener("click", () => {
-      const visible = ul.getAttribute("data-visible");
 
-      if (visible == "true") {
-        ul.setAttribute("data-visible", false);
-        ham.setAttribute("data-visible", false);
-      }
-
-      console.log(visible);
-    });
   }
 
   // console.log(visible)

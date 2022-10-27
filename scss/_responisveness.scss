@@ -216,3 +216,26 @@
 @media screen and (max-width: 500px) {
   @include small_devices();
 }
+@media( hover:hover){
+  .all {
+    a {
+       &:hover {
+         background-color: $Black;
+         color: $White;
+       }
+    }
+}
+.dimage,.mimage{
+  .imgd {
+     &:hover {
+        cursor: pointer;
+        img{
+          opacity: .3;
+        }
+        p{
+          color:$Black;
+        }
+      }
+    }
+}
+}

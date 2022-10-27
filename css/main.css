@@ -467,4 +467,19 @@ footer .right p {
   .footer .right p {
     text-align: center;
   }
+}
+@media (hover: hover) {
+  .all a:hover {
+    background-color: hsl(0deg, 0%, 0%);
+    color: hsl(0deg, 0%, 100%);
+  }
+  .dimage .imgd:hover, .mimage .imgd:hover {
+    cursor: pointer;
+  }
+  .dimage .imgd:hover img, .mimage .imgd:hover img {
+    opacity: 0.3;
+  }
+  .dimage .imgd:hover p, .mimage .imgd:hover p {
+    color: hsl(0deg, 0%, 0%);
+  }
 }/*# sourceMappingURL=main.css.map */
