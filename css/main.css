@@ -16,7 +16,7 @@
 }
 
 header {
-  background-image: url(../images/desktop/image-hero.jpg);
+  background-image: url("../images/desktop/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -47,7 +47,7 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
-  background-image: url(../images/icon-hamburger.svg);
+  background-image: url("../images/icon-hamburger.svg");
 }
 .nav-bar nav {
   height: -webkit-fit-content;
@@ -274,7 +274,7 @@ footer .right p {
     width: 90%;
   }
   header {
-    background-image: url(../images/mobile/image-hero.jpg);
+    background-image: url("../images/mobile/image-hero.jpg");
   }
   .nav-bar .logo,
 .nav-bar .ham {
@@ -282,7 +282,7 @@ footer .right p {
     z-index: 39993;
   }
   .nav-bar .ham[data-visible=true] {
-    background-image: url(../images/icon-close.svg);
+    background-image: url("../images/icon-close.svg");
   }
   .nav-bar nav ul {
     display: flex;
@@ -295,6 +295,7 @@ footer .right p {
     left: 0;
     top: 0;
     gap: 2em;
+    z-index: 30;
     padding-top: 150px;
     background-color: hsl(0deg, 0%, 0%);
     transform: translateX(-200%);
@@ -325,7 +326,7 @@ footer .right p {
     display: block;
   }
   .impressive {
-    z-index: -333;
+    z-index: 2;
   }
   .sect1 {
     display: grid;
